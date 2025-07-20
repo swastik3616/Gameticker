@@ -79,8 +79,8 @@ const CricketScore = () => {
           data.map((curVal) => {
             console.log(curVal);
             if (curVal.status !== "Match not started") {
-              if (renderMatch(curVal)) {
-                return renderMatch(curVal);
+              if (renderMatch(curVal, 'nfl-card')) {
+                return renderMatch(curVal, 'nfl-card');
               }
 
               if(search === ""){
