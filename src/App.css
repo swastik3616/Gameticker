@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main container centers everything and adds padding */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 32px 0;
+}
+
+/* Search bar styling */
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.searchBar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.searchBar button {
+  padding: 8px 18px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.searchBar button:hover {
+  background: #125ea8;
+}
+
+/* Heading styling */
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.heading img {
+  width: 48px;
+  height: 48px;
+}
+.heading p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+}
+
+/* Container for cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card styling */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 24px 20px;
+  min-width: 260px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s;
+}
+.card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 4px 20px rgba(25, 118, 210, 0.12);
+}
+.card h3 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #1976d2;
+  text-align: center;
+}
+
+/* Team images and scores */
+.img {
+  display: flex;
+  gap: 32px;
+  margin: 18px 0 10px 0;
+  justify-content: center;
+}
+.img > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+.img p {
+  margin: 2px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #388e3c;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90vw;
+    min-width: unset;
+    max-width: unset;
+  }
+}
